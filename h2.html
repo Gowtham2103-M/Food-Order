@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - ShopUrFood</title>
+  <link rel="stylesheet" href="s1.css">
+</head>
+<body>
+
+  <div class="container">
+    <div class="right">
+      <h2>Create Your Account</h2>
+      <span class="login-label">SIGN UP DETAILS</span>
+
+      <!-- Sign Up form -->
+      <form id="signup-form" method="POST" action="signup.php">
+        <input type="text" name="fullname" class="input-box" placeholder="Full Name" required>
+        <input type="email" name="email" class="input-box" placeholder="Email ID" required>
+        <input type="password" name="password" class="input-box" placeholder="Password" required minlength="6">
+        <input type="tel" name="phone" class="input-box" placeholder="Phone Number" required pattern="[0-9]{10}">
+        <input type="text" name="address" class="input-box" placeholder="Address" required>
+
+        <select name="gender" class="input-box" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <input type="date" name="dob" class="input-box" required>
+
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+
+      <div class="create-account">
+        <p style="color:black">Already have an account?</p><a href="h1.html">Login Here</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

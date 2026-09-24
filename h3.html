@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ShopUrFood Dashboard</title>
+  <link rel="stylesheet" href="s2.css" />
+</head>
+<body>
+
+  <!-- Controls: search, sort, logout, your order -->
+  <div class="controls" role="region" aria-label="Search and controls">
+    <div class="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M21 21l-4.35-4.35" stroke="#999" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="11" cy="11" r="6" stroke="#999" stroke-width="2" fill="none"/>
+      </svg>
+      <input id="search" placeholder="Search restaurant by names or tags..." aria-label="Search restaurants" />
+    </div>
+
+    <select id="sort" aria-label="Sort restaurants">
+      <option value="rating-desc">Sort By RATING (High → Low)</option>
+      <option value="rating-asc">Sort By RATING (Low → High)</option>
+      <option value="time-asc">Sort By TIME (Fastest)</option>
+      <option value="time-desc">Sort By TIME (Slowest)</option>
+      <option value="name-asc">Sort By NAME (A → Z)</option>
+    </select>
+
+    <a id="logout-btn" href="h1.html">Logout</a>
+    <button class="order-pill" id="order-pill" type="button">Your Order</button>
+  </div>
+
+  <!-- Restaurant Grid -->
+  <main>
+    <section class="grid" id="grid" aria-live="polite">
+      <!-- Restaurant cards injected by j1.js -->
+    </section>
+  </main>
+
+  <!-- Floating Order Button (Bottom-Left) -->
+  <button id="order-btn">Order</button>
+
+  <!-- JavaScript -->
+  <script src="j1.js"></script>
+  <script>
+    const orderPill = document.getElementById('order-pill');
+    const logoutBtn = document.getElementById('logout-btn');
+    const orderBtn = document.getElementById('order-btn');
+
+    // Redirect "Your Order" pill to order page
+    orderPill.addEventListener('click', () => {
+      window.location.href = 'h4.html';
+    });
+
+    // Logout button redirects to logout.php
+    logoutBtn.addEventListener('click', () => {
+    // Redirect to logout.php
+    window.location.href = 'logout.php';
+});
+
+
+    //
